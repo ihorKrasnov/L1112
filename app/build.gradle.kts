@@ -42,6 +42,26 @@ android {
 }
 
 dependencies {
+    // Local Unit Tests
+    implementation("androidx.test:core:1.5.0") // Updated to the latest stable version
+    testImplementation("junit:junit:4.13") // Stable version, no change needed
+    testImplementation("org.hamcrest:hamcrest:2.2") // Latest version for hamcrest
+    testImplementation("androidx.arch.core:core-testing:2.1.0") // Latest stable
+    testImplementation("org.robolectric:robolectric:4.9.0") // Updated version of Robolectric
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3") // Updated to the latest stable version
+    testImplementation("com.google.truth:truth:1.1") // Latest version of Truth
+    testImplementation("org.mockito:mockito-core:4.8.0") // Updated to the latest version
+
+    // Instrumented Unit Tests
+    androidTestImplementation("junit:junit:4.13") // Same version, no change needed
+    androidTestImplementation("androidx.arch.core:core-testing:2.1.0") // Latest stable
+    androidTestImplementation("com.google.truth:truth:1.1") // Updated version of Truth
+    androidTestImplementation("androidx.test.ext:junit:1.1.5") // Updated to latest stable
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1") // Updated to latest stable
+    androidTestImplementation("org.mockito:mockito-core:4.8.0") // Updated to latest stable
+
+
+
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -60,6 +80,7 @@ dependencies {
     //ROOM
     implementation("androidx.room:room-runtime:2.5.0")
     implementation("androidx.room:room-ktx:2.5.0")
+    androidTestImplementation(libs.androidx.core.testing)
     kapt("androidx.room:room-compiler:2.5.0")
     implementation("androidx.room:room-testing:2.5.1")
 

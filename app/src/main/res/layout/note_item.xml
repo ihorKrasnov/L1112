@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/taskCellContainer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="10dp">
+
+<!-- Title section -->
+<TextView
+    android:id="@+id/title"
+    style="@style/TextAppearance.AppCompat.Title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:text="Task Title"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:singleLine="true"/>
+
+<!-- Horizontal layout for text and delete button -->
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:gravity="start">
+
+    <!-- Text section -->
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Description of the task"
+        android:layout_marginEnd="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        style="@style/TextAppearance.AppCompat.Body1"/>
+
+    <!-- Delete button -->
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="Delete"
+        android:id="@+id/deleteButton"
+        android:layout_marginStart="15dp"
+        android:src="@drawable/delete"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>
+
+<TextView
+    android:id="@+id/createAt"
+    style="@style/TextAppearance.AppCompat.Body1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start"
+    android:text="Created at"
+    android:ellipsize="end"
+    android:maxLines="1"
+    android:singleLine="true"
+    android:layout_marginTop="5dp"/>
+
+</LinearLayout>
+
+    </androidx.cardview.widget.CardView>
